@@ -1,0 +1,14 @@
+// /assets/settings.scss
+// Specific Vuetify settings
+@use 'vuetify/settings' with (
+    $utilities: false,
+    $button-height: 40px,
+    $body-font-family: 'Lato',
+    $mdc-typography-styles-headline1: (
+        font-family: unquote("Lato Black"),
+        font-size: 96
+    ),
+    $heading-font-weight: 'black',
+);
+
+//s
