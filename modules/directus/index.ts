@@ -26,7 +26,7 @@ export default defineNuxtModule({
 		defaults: {
 			rest: {
 				baseUrl: 'https://stagevegas.travelsmg.com',
-				nuxtBaseUrl: 'charming-sfogliatella-66723b.netlify.app',
+				nuxtBaseUrl: 'https://charming-sfogliatella-66723b.netlify.app',
 			},
 			auth: {
 				enabled: true,
