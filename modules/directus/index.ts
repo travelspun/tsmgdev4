@@ -25,7 +25,7 @@ export default defineNuxtModule({
 
 		defaults: {
 			rest: {
-				baseUrl: 'http://localhost:8055',
+				baseUrl: 'https://stagevegas.travelsmg.com',
 				nuxtBaseUrl: 'http://localhost:3000',
 			},
 			auth: {
