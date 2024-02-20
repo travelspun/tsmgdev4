@@ -17,7 +17,7 @@ const log = useLogger();
 
 export default defineNuxtModule({
 	meta: {
-		name: 'agencyos-nuxt-directus',
+		name: 'travelspun-tsmg-mainsite',
 		configKey: 'directus',
 		compatibility: {
 			nuxt: '^3.0.0',
@@ -25,8 +25,8 @@ export default defineNuxtModule({
 
 		defaults: {
 			rest: {
-				baseUrl: 'https://stagevegas.travelsmg.com',
-				nuxtBaseUrl: 'https://charming-sfogliatella-66723b.netlify.app',
+				baseUrl: 'http://localhost:8055',
+				nuxtBaseUrl: 'http://localhost:4000',
 			},
 			auth: {
 				enabled: true,
