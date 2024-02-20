@@ -1,32 +1,27 @@
 <template>
-    <v-container>
-        <v-row align="center" justify="center">
-            <v-col cols="auto">
-                <v-card
-                color="tertiary"
-                class="mx-auto"
-                max-width="375"
-                title="Bob Barker"
-                subtitle="Travel when Price is Right"
-                >
-                    <template v-slot:append>
-                        <v-avatar size="50" class="avatarDrop">
-                            <v-img
-                                src="https://cdn.vuetifyjs.com/images/john.png"
-                                alt="John"
-                            ></v-img>
-                        </v-avatar>
-                    </template>
-                    <v-card-text class="pa-5" style="background-color:#ffffff;color:#000000">
-                        The advantage in combining one-to-one meetings/roundtable meetings with a 
-                        trade show is that you don't feel like you missed out on connecting with 
-                        other participants. Then throw in informational sessions and you have the 
-                        ideal trade show!
-                    </v-card-text>
-                </v-card>
-            </v-col>
-        </v-row>
-    </v-container>
+   <section class="bg-white dark:bg-gray-900">
+    <div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+    <div class="max-w-2xl">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse.</p>
+    </div>
+    <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+      <li>
+        <div class="flex items-center gap-x-6">
+          <img class="h-16 w-16 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+          <div>
+            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Leslie Alexander</h3>
+            <p class="text-sm font-semibold leading-6 text-indigo-600">Co-Founder / CEO</p>
+          </div>
+        </div>
+      </li>
+
+      <!-- More people... -->
+    </ul>
+  </div>
+</div>
+</section>
   </template>
 
   <style scoped>

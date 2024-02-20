@@ -50,6 +50,23 @@ const { data: page } = await useAsyncData(
 										'buttons',
 										'image_position',
 										{ button_group: ['*', { buttons: ['*', { page: ['permalink'], post: ['slug'] }] }] },
+										{ slideshow: [ 'name',
+														{
+															slides: [
+																{ slides_id: [
+																	'name',
+																	'link',
+																	'type',
+																	{ image: ['id', 'title', 'description'] },
+																	{ video: ['*'] },
+																] }
+															]
+														}
+														
+														
+													],
+												},
+										{ video: ['*'] },
 									],
 									block_event_carousel:[
 										'title',
@@ -145,6 +162,7 @@ const { data: page } = await useAsyncData(
 											],
 										},
 									],
+									block_form: ['id', 'title', 'headline', { form: ['*'] }],
 									block_logocloud: [
 										'id',
 										'title',
@@ -254,6 +272,7 @@ const { data: page } = await useAsyncData(
 									block_html: ['*'],
 									block_video: ['*'],
 									block_cardgroup: ['*'],
+									block_page_anchor: ['*'],
 								},
 							},
 						],
@@ -323,6 +342,7 @@ useServerSeoMeta({
 <template>
 	<NuxtErrorBoundary>
 		<!-- Render the page using the PageBuilder component -->
+	<!-- page	{{  page  }} -->
 		<PageBuilder v-if="page" :page="page as Page" />
 		<!-- If there is an error, display it using the VAlert component -->
 		<template #error="{ error }">

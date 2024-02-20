@@ -101,13 +101,14 @@ useServerSeoMeta({
 </script>
 <template>
 	<BlockContainer>
-		<div class="flex flex-col">
-			<TypographyTitle v-if="page?.title" >
-				<div class='text-h4 font-weight-bold' align="center">{{ page?.title }}</div>
+		<div class="flex flex-col col-span-full"  align="center">
+			<TypographyTitle v-if="page?.title"   align="center">
+				<div class='text-h4 font-weight-bold'>{{ page?.title }}</div>
 			</TypographyTitle>
-			<TypographyProse v-if="page?.headline" :content="page?.headline" />
+			<TypographyProse v-if="page?.headline" :content="page?.headline" :alignment="center" />
 		</div>
-		
+	
+
 		<v-container fluid>
 			<v-row no-gutters >
 				<v-col
@@ -140,8 +141,8 @@ useServerSeoMeta({
 				</v-col>
 			</v-row>
 		</v-container>
-		
-		<BlogGrid />
+<!-- 		
+		<BlogGrid /> -->
 		<!-- <header class="pb-6 border-b border-gray-300 dark:border-gray-700">
 			<TypographyTitle>{{ page?.title }}</TypographyTitle>
 			<TypographyHeadline :content="page?.headline" />
