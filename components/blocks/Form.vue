@@ -7,7 +7,7 @@ defineProps<{
 </script>
 <template>
 	<BlockContainer>
-		<div class="max-w-3xl p-8 mx-auto mt-4 bg-gray-100 dark:bg-gray-800 rounded-panel">
+		<div class="p-8 max-w-5xl mx-auto mt-4" align="center">
 			<TypographyTitle v-if="data?.title">{{ data?.title }}</TypographyTitle>
 			<TypographyHeadline v-if="data?.headline" :content="data?.headline" />
 			<UForm v-if="data?.form" :form="data?.form as Form" class="mt-4" />

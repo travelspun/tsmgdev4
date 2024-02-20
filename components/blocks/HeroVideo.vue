@@ -21,13 +21,21 @@
     // });
 
     const url = computed(() => {
+        
+        console.log('type' + props.data.type)
         if (props.data.type === 'video' && props.data.video) {
-            return fileUrl(props.data.video);
+            if (props.data.video?.type === 'url' && props.data.video.video_url) {
+                return props.data.video.video_url;
+            }
+            if(props.data.video?.type === 'file' && props.data.video.video_file) {
+                return fileUrl(props.data.video.video_file);
+            }
         }
 
         if (props.data.type === 'url' && props.data.video_url) {
             return props.data.video_url;
         }
+        
 
         return null;
     });
@@ -44,11 +52,15 @@
         return null;
     });
 
+    // onMounted(() => {
+    // el.value // <div>
+    // })
 
-   const scrollTo = () =>  document.getElementById("about").scrollIntoView({behavior: 'smooth'});
+    // const scrollTo = () => rtTop.scrollIntoView({behavior: 'smooth'});
+   const scrollTo = () =>  document.getElementById("section1").scrollIntoView({behavior: 'smooth'});
+
 </script>
 <template>
-  
  <!-- <div class="home-hero" role="banner"> -->
     <v-container fluid class="home-hero"  align-self='center'>
         <v-row>
@@ -69,29 +81,21 @@
                             class="text-box-over d-flex flex-column 
                                 fill-height text-white
                                 pt-10 mt-10">
-                            <h3 class="text-h3 font-weight-black align-center justify-center mt-5 pt-5">
+                            <div class="text-h2 font-weight-black align-center justify-center mt-5 pt-5">
                                <div v-html="props.data.headline"></div>
-                            </h3>
-                            <h4 class='text-h4 mt-5 pt-5'>
+                            </div>
+                            <div class='text-h3 mt-5 pt-5 font-weight-bold'>
                                {{ props.data.content }}
-                            </h4>
+                            </div>
                             <div class="py-10 mt-5 pt-5">
                                 <template 
                                     v-if="props.data.button_group"
                                     v-for="button in props.data.button_group.buttons as BlockButton[]"
 			                        :key="button.id"
                                 >
-                                    <v-btn 
-                                        size="x-large"
-                                        rounded="xl"
-                                        class='text-white font-weight-bold'
-                                        color='secondary' 
-                                        @click="scrollTo"
-                                    >{{ button.label }}</v-btn>
-                                </template>
+                                    <BlocksButtonGroup v-if="props.data.button_group" :data="props.data.button_group as BlockButtonGroup"/>
+                               </template>
                                
-                                <!-- <BlocksButtonGroup v-if="props.data.button_group" :data="props.data.button_group as BlockButtonGroup"  @click="scrollTo" /> -->
-                                
                             </div>
                         </div>
                     </v-col>
@@ -100,6 +104,7 @@
             </v-col>
         </v-row>
     </v-container>
+    
 <!-- </div> -->
 </template>
 <style scoped>

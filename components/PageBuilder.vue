@@ -16,11 +16,12 @@ const componentMap: Record<BlockType, any> = {
 	block_html: resolveComponent('BlocksRawHtml'),
 	block_video: resolveComponent('BlocksVideo'),
 	block_gallery: resolveComponent('BlocksGallery'),
-	block_slideshow: resolveComponent('BlocksSlideshow'),
+	block_slideshow: resolveComponent('BlocksImageCarousel'),
 	block_stat_counters: resolveComponent('BlocksStatisticsCounters'),
 	block_steps: resolveComponent('BlocksSteps'),
 	block_columns: resolveComponent('BlocksColumns'),
 	block_divider: resolveComponent('BlocksDivider'),
+	block_page_anchor: resolveComponent('BlocksPageAnchor'),
 };
 
 const props = defineProps<{
@@ -36,8 +37,10 @@ const blocks = computed(() => {
 </script>
 <template>
 	<div id="content" class="mx-auto">
+		
 		<template v-for="block in blocks" :key="block.id">
+			<!-- Block {{ block.collection}} -->
 			<component :is="componentMap[block.collection]" v-if="block && block.collection" :data="block.item" />
-		</template>
+		</template> 
 	</div>
 </template>

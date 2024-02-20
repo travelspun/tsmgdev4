@@ -57,10 +57,10 @@ onMounted(() => {
 					:class="[
 					{
 						'prose-sm': size === 'sm',
-						'md:prose-base lg:prose-lg': size === 'md',
-						'prose-lg lg:prose-xl': size === 'lg',
+						'md:prose-base lg:prose-lg': size === 'lg',
+						'prose-lg lg:prose-xl': size === 'xl',
 					},
-					'prose dark:prose-invert prose-headings:font-display prose-headings:font-semibold',
+					'prose dark:prose-invert prose-headings:font-display prose-headings:font-semibold max-w-none',
 					]"
 					v-html="content">
 				</div>

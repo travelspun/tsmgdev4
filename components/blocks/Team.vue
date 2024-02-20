@@ -78,8 +78,6 @@ const duration = computed(() => {
 </script>
 <template>
 	<section>
-		
-		<br>
 		<BlockContainer>
 			<div class="flex flex-col mx-auto  text-align-center" align="center">
 				<!-- Text -->
@@ -93,8 +91,8 @@ const duration = computed(() => {
 				<div
 					ref="target"
 					class="w-full relative grid h-[49rem] max-h-[60vh] 
-						grid-cols-1 items-start gap-8 overflow-hidden 
-						px-4 md:grid-cols-2 mt-8 lg:mt-0"
+						grid-cols-1 items-start gap-8 
+						px-4 md:grid-cols-2 mt-8 lg:mt-0 "
 						align="center"	
 				>
 					<!-- Left Col -->

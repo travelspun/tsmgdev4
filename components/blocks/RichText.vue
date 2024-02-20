@@ -15,7 +15,8 @@ withDefaults(
 
 <template>
 	<BlockContainer >
-		<span v-if="!data.element_id" :id="data.element_id"></span>
+		<!-- ID {{ data.element_id }} -->
+		<!-- <span v-if="!data.element_id" :id="data.element_id"></span> -->
 		<div
 			:class="[
 				{

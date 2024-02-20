@@ -8,7 +8,6 @@ defineProps<{
 const componentMap: Record<HeroType, any> = {
 	video: resolveComponent('BlockHeroVideo'),
 	image: resolveComponent('BlockHeroImage'),
-	slider: resolveComponent('BlockHeroSlider'),
 };
 
 

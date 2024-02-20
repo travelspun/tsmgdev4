@@ -77,7 +77,8 @@ export default defineComponent({
 				h(Button, {
 					type: 'submit',
 					size: 'lg',
-					label: 'Submit',
+					label: 'SUBMIT',
+					class: 'bg-primary text-white font-weight-bold',
 					onClick: (event: Event) => {
 						event.preventDefault();
 						// @ts-ignore

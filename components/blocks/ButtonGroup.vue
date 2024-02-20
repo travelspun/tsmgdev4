@@ -13,12 +13,15 @@ function getUrl(button: BlockButton): string | undefined {
 			return (button.post as Post)?.slug ?? undefined;
 		case 'external':
 			return button.external_url ?? undefined;
+		case 'page_anchor':
+			return button.page_anchor ?? undefined;
 		default:
 			return undefined;
 	}
 }
 </script>
 <template>
+	
 	<div :class="`flex flex-col justify-${data.alignment} space-y-4 md:space-x-4 md:flex-row md:space-y-0`">
 		<template 
 			v-for="button in data.buttons as BlockButton[]"
@@ -28,7 +31,7 @@ function getUrl(button: BlockButton): string | undefined {
 						size="large"
 						rounded="xl"
 						class='text-white font-weight-bold'
-						color='tertiary' 
+						:color='button?.color' 
 					>{{ button.label }}</v-btn>
 				<!-- <v-btn
 					color="secondary"
