@@ -11,6 +11,7 @@ export type * from './block-hero-image';
 export type * from './block-hero-slider';
 export type * from './block-html';
 export type * from './block-logocloud';
+export type * from './block-page-anchor';
 export type * from './block-quote';
 export type * from './block-richtext';
 export type * from './block-slideshow';

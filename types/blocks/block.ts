@@ -11,6 +11,7 @@ import type { BlockHeroImage } from './block-hero-image';
 import type { BlockHeroSlider } from './block-hero-slider';
 import type { BlockHtml } from './block-html';
 import type { BlockLogocloud } from './block-logocloud';
+import type { BlockPageAnchor } from './block-page-anchor';
 import type { BlockQuote } from './block-quote';
 import type { BlockRichtext } from './block-richtext';
 import type { BlockSlideshow } from './block-slideshow';
@@ -35,6 +36,7 @@ export type BlockType =
 	| 'block_hero_slider'
 	| 'block_html'
 	| 'block_logocloud'
+	| 'block_page_anchor'
 	| 'block_quote'
 	| 'block_richtext'
 	| 'block_slideshow'
@@ -59,6 +61,7 @@ export type Block =
 	| BlockHeroSlider
 	| BlockHtml
 	| BlockLogocloud
+	| BlockPageAnchor
 	| BlockQuote
 	| BlockRichtext
 	| BlockSlideshow

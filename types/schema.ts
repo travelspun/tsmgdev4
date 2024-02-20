@@ -12,6 +12,7 @@ import type {
 	BlockHeroSlider,
 	BlockHtml,
 	BlockLogocloud,
+	BlockPageAnchor,
 	BlockQuote,
 	BlockRichtext,
 	BlockSlideshow,
@@ -113,6 +114,7 @@ export interface Schema {
 	block_hero_slider: BlockHeroSlider[];
 	block_html: BlockHtml[];
 	block_logocloud: BlockLogocloud[];
+	block_page_anchor: BlockPageAnchor[];
 	block_quote: BlockQuote[];
 	block_richtext: BlockRichtext[];
 	block_slideshow: BlockSlideshow[];

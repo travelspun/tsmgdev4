@@ -12,6 +12,7 @@ import type {
 	BlockHero,
 	BlockHtml,
 	BlockLogocloud,
+	BlockPageAnchor,
 	BlockQuote,
 	BlockRichtext,
 	BlockSlideshow,
@@ -53,6 +54,7 @@ export interface PageBlock {
 				| BlockHero
 				| BlockHtml
 				| BlockLogocloud
+				| BlockPageAnchor
 				| BlockQuote
 				| BlockRichtext
 				| BlockSlideshow
