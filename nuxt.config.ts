@@ -66,7 +66,7 @@ export default defineNuxtConfig({
 
 	runtimeConfig: {
 		public: {
-			siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+			siteUrl: process.env.SITE_URL || 'http://localhost:4000',
 		},
 	},
 
@@ -74,7 +74,7 @@ export default defineNuxtConfig({
 	directus: {
 		rest: {
 			baseUrl: process.env.DIRECTUS_URL,
-			nuxtBaseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+			nuxtBaseUrl: process.env.SITE_URL || 'http://localhost:4000',
 		},
 		auth: {
 			enabled: true,
@@ -118,8 +118,8 @@ export default defineNuxtConfig({
 	},
 
 	site: {
-		url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-		name: 'AgencyOS',
+		url: process.env.SITE_URL || 'http://localhost:4000',
+		name: 'Travel Show Marketing Group',
 	},
 
 	// OG Image Configuration - https://nuxtseo.com/og-image/getting-started/installation
