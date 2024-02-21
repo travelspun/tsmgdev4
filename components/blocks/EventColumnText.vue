@@ -16,13 +16,13 @@ const { fileUrl } = useFiles();
 </script>
 
 <template>
-    <v-container no-gutters align-self align="center">
+    <BlockContainer  align="center">
         <v-card
-            :class="'mx-auto'"
+            :class="'mx-auto my-auto'"
             flat
             height='100%'
         >
-            <div class='ma-2 pa-1'>
+            <div class='ma-2 pa-1' align="center">
                 <v-img
                     v-if="(event?.event_logo as unknown as File)?.id"
                     :src="fileUrl((event?.event_logo as unknown as File)?.id)"
@@ -40,16 +40,21 @@ const { fileUrl } = useFiles();
                 <span v-if="event?.location">{{event?.location}}</span><br>
                 
                 <div class='mt-3'>
-                <p>
-                    <div  v-html="event.text">
-                    </div>
-                </p>
-                <p class='mt-5'>
-                    <BlocksButtonGroup v-if="event?.button_group" :data="event.button_group as BlockButtonGroup"  />
-                </p>
+                    <template v-if="event?.text">
+                        <p>
+                            <div  v-html="event?.text"></div>
+                        </p>
+                    </template>
+                    <template v-if="event?.button_group">
+                        <p class='mt-5'>
+                            <BlocksButtonGroup v-if="event?.button_group" :data="event.button_group as BlockButtonGroup"  />
+                        </p>
+                    </template>
+               
                 </div>
             </v-card-text>
         
         </v-card>
-    </v-container>
+    </BlockContainer>
+    
 </template>

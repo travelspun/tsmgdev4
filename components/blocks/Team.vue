@@ -18,6 +18,7 @@
 
 	function splitArray(array: any[], numParts: number = 2) {
 		let result = [] as any[];
+		
 
 		for (let i = 0; i < array.length; i++) {
 			let index = i % numParts;
@@ -35,14 +36,15 @@
 const teamToDisplay = computed(() => {
 	// Split the array into two arrays
 	const teamMembersSplit = splitArray(unref(team), 2);
-
+	console.log(teamMembersSplit)
 	// Return the two arrays as an object
 	return {
 		// Duplicate each array so we can animate the last item to the first position
-		left: [...teamMembersSplit[0], ...teamMembersSplit[0]],
-		right: [...teamMembersSplit[1], ...teamMembersSplit[1]],
+		left: [...teamMembersSplit[0]],
+		right: [...teamMembersSplit[1]],
 	};
 });
+
 
 function animationDelay() {
 	let possibleAnimationDelays = ['0s', '0.1s', '0.2s', '0.3s', '0.4s', '0.5s'];
@@ -79,7 +81,7 @@ const duration = computed(() => {
 <template>
 	<section>
 		<BlockContainer>
-			<div class="flex flex-col mx-auto  text-align-center" align="center">
+			<div class="flex flex-col mx-auto mt-10 text-align-center" align="center">
 				<!-- Text -->
 				<div class="flex flex-col">
 					<TypographyTitle v-if="data?.title" >
@@ -90,7 +92,7 @@ const duration = computed(() => {
 
 				<div
 					ref="target"
-					class="w-full relative grid h-[49rem] max-h-[60vh] 
+					class="w-full relative grid 
 						grid-cols-1 items-start gap-8 
 						px-4 md:grid-cols-2 mt-8 lg:mt-0 "
 						align="center"	
@@ -111,10 +113,12 @@ const duration = computed(() => {
 							v-for="person in teamToDisplay.right"
 							:key="person.id"
 							:person="person"
+							:style="{
+								animationDelay: animationDelay(),
+							}"
 						/>
 					</div>
 				</div>
-				
 			</div>
 			
 		</BlockContainer>

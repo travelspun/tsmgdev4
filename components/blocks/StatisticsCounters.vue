@@ -19,10 +19,9 @@
   });
 </script>
 <template>
-    <v-container
-      class="bg-primary"
+    <div
+      class="mx-auto bg-primary"
 	    align='center'
-      fluid
     >
       <v-container 
         fluid class="bg-primary"
@@ -72,5 +71,5 @@
         </v-row>
        
       </v-container>
-    </v-container>
+    </div>
 </template>

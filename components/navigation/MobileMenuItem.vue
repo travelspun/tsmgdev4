@@ -58,7 +58,8 @@ const emit = defineEmits(['close']);
 			</div>
 		</Motionable>
 	</div>
-	<NuxtLink v-else :href="item.url" class="flex items-center rounded-md dark:text-white">
+	
+	<NuxtLink v-else :href="getNavItemUrl(item)" class="flex items-center rounded-md dark:text-white">
 		<span class="text-2xl font-medium font-display">
 			{{ item.title }}
 		</span>

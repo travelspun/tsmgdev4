@@ -4,11 +4,11 @@
 		<div
 			class="relative flex flex-col min-h-screen overflow-hidden antialiased transition duration-150 bg-white "
 		>
-			<div class="relative">
+			<!-- <div class="relative"> -->
 				<NavigationTopMenu />
-			</div>
+			<!-- </div> -->
 
-			<div class="relative text-gray-900">
+			<div class="relative">
 				<slot />
 			</div>
 
@@ -16,9 +16,7 @@
 				<NavigationTheFooter />
 			</div>
 
-			<div class="fixed z-10 bottom-4 left-4">
-				<!-- <ScrollTop /> -->
-			</div>
+			
 		</div>
 	</v-app>
 </template>

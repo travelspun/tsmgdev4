@@ -87,12 +87,8 @@
       <v-row>
         <v-col 
           align-self="center"
-          cols='4' 
-          sm="10"
-          md='4'
+          class="col-auto md:col-span-6 sm:col-span-6"
         >
-
-       
         <h2 class="text-h5 font-weight-bold">{{ unref(props.data).title }}</h2>
         <v-divider :thickness="5" color="primary" width='85%' class="mt-5 mb-5 border-opacity-75"></v-divider>
           <v-sheet class="text-h6">

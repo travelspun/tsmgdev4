@@ -35,8 +35,7 @@ const image_url = computed(() => {
         <!-- {{  images }} -->
         <v-carousel 
             :cycle='false' 
-            :continuous='true'
-            height="425" 
+            :continuous='true' 
             hide-delimiters 
             :show-arrows="true"
             >

@@ -23,7 +23,27 @@ const features = computed(() => {
 <template>
 	<section>
 		<BlockContainer>
-			<v-row align="center" justify="center">
+			<div  align="center" class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+				<template v-for="(feature, index) in features as Feature[]"
+					:key="feature?.id"
+					ref="featureRefs"
+				>
+					<div>
+						<div class="flex justify-center items-center  mb-4 w-20 h-20 lg:h-25 lg:w-25">
+							<img v-if="(feature?.image as unknown as File)?.id"
+								:src="fileUrl((feature?.image as unknown as File)?.id)"
+								max-width="50px"
+								class="d-block ml-auto mr-auto"
+								:class="{ 'zoom-efect': hover }"
+							>
+
+						</div>
+						<h3 class="mb-2 text-xl font-bold dark:text-white">{{ feature?.title }}</h3>
+						<p class="text-lg">{{ feature?.text }}</p>
+					</div>
+				</template>
+			</div>
+			<!-- <v-row align="center" justify="center">
 				<v-col cols="10">
 				<v-row align="center" justify="space-around">
 					<v-col
@@ -58,7 +78,7 @@ const features = computed(() => {
 					</v-col>
 				</v-row>
 				</v-col>
-			</v-row>
+			</v-row> -->
 		</BlockContainer>
 	</section>
 </template>

@@ -77,56 +77,6 @@ onMounted(() => {
   <v-container>
     <NavigationMobileMenu v-if="navigation" :navigation="navigation" />
     
-    <!-- <v-navigation-drawer
-      v-model="drawer"
-      app
-      temporary
-      dark
-      src="/images/bgDrawer.jpg"
-    >
-      <v-divider />
-      <div align='center'>
-        <nuxt-link to="/">
-          <Logo 
-            :logo="logo"  />
-        </nuxt-link>
-      </div>
-      <v-list dense>
-        <v-list-item
-          v-for="(nav, i) in navItems"
-          :key="i"
-          link
-        >
-        <nuxt-link :to="nav.link">
-          <v-btn 
-            flat 
-            variant="text"
-            color='primary' 
-          >
-            <span class="mr-2">{{nav.text}}</span>
-          </v-btn>
-        </nuxt-link>
-       
-            <v-list-item
-            v-for="(sub, i) in nav.subNav"
-              v-if="nav.subNav"
-              :key="i"
-            >
-            <nuxt-link :to="sub.link" class='pl-2'>
-              <v-btn 
-              flat 
-              variant="text"
-              color='primary' 
-              > 
-              <span class="mr-2">{{sub.text}}</span>
-              </v-btn>
-            </nuxt-link>
-            </v-list-item>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
-    
-
     <v-app-bar
       app
       :color="color"
@@ -134,16 +84,6 @@ onMounted(() => {
       class="px-5"
       :class="{ expand: flat }"
     >
-   
-    <!-- <v-app-bar-nav-icon 
-      class="d-flex d-sm-none" 
-      @click="drawer = true" 
-    ></v-app-bar-nav-icon> -->
-    <!-- <div class='d-flex d-sm-none'>
-      <nuxt-link to="/">
-        <v-img src="/img/tsmglogo.png" width='200' max-width="276px" />
-      </nuxt-link>
-    </div> -->
       <v-app-bar-title  >
         <nuxt-link to="/">
           <Logo 

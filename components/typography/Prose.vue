@@ -8,7 +8,8 @@ export interface ProseProps {
 }
 
 withDefaults(defineProps<ProseProps>(), {
-	size: 'md'
+	size: 'md',
+	alignment: 'center',
 });
 
 const config = useRuntimeConfig();
@@ -51,21 +52,19 @@ onMounted(() => {
 
 <template>
 
-	<v-container fluid :align="alignment" >
-				<div 
-					ref="contentEl"
-					:class="[
-					{
-						'prose-sm': size === 'sm',
-						'md:prose-base lg:prose-lg': size === 'lg',
-						'prose-lg lg:prose-xl': size === 'xl',
-					},
-					'prose dark:prose-invert prose-headings:font-display prose-headings:font-semibold max-w-none',
-					]"
-					v-html="content">
-				</div>
-			
-	</v-container>	
+	<div	
+		:align="alignment"
+		ref="contentEl"
+		:class="[
+			{
+				'prose-sm': size === 'sm',
+				'md:prose-base lg:prose-lg': size === 'md',
+				'prose-lg lg:prose-xl': size === 'lg',
+			},
+			'max-w-screen-lg prose dark:prose-invert prose-img:rounded-lg prose-img:rounded-lg prose-headings:font-display prose-headings:font-semibold',
+		]"
+		v-html="content"
+	/>
 	<!-- <div
 		ref="contentEl"
 		:class="[
