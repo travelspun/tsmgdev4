@@ -119,14 +119,16 @@ useServerSeoMeta({
 				sm='6'
 				>
 				<v-card  class='mx-10' flat>
-					<v-img
-					:src="fileUrl(post.image)"
-					class="align-end"
-					gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-					height="300"
-					cover
-					>
-					</v-img>
+					<nuxt-link :to="`/posts/${post.slug}`" class='primary'>
+						<v-img
+						:src="fileUrl(post.image)"
+						class="align-end"
+						gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+						height="300"
+						cover
+						>
+						</v-img>
+					</nuxt-link>
 					<v-card-text>
 					<v-spacer></v-spacer>
 					<nuxt-link :to="`/posts/${post.slug}`" class='primary'><span class='text-primary font-weight-bold'>{{post.title}}</span></nuxt-link><br>
