@@ -45,11 +45,11 @@
         {{ unref(props.data)?.name }}
       </v-card-title>
   
-      <v-card-subtitle>
+      <v-card-text>
         {{ unref(props.data)?.dates }}<br>
         {{ unref(props.data)?.host }}<br>
         {{ unref(props.data)?.location }}
-      </v-card-subtitle>
+      </v-card-text>
   
       <v-card-actions>
          <BlocksButtonGroup v-if="props.data.button_group" :data="props.data.button_group as BlockButtonGroup"  />

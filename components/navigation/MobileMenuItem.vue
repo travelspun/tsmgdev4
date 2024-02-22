@@ -54,7 +54,8 @@ const emit = defineEmits(['close']);
 				</NuxtLink>
 			</div>
 			<div class="absolute bottom-4 left-4">
-				<UButton icon="material-symbols:arrow-back-rounded" label="Back" size="xl" @click="subMenuOpen = false" />
+				<UButton  color="primary" variant="solid"
+				 icon="material-symbols:arrow-back-rounded" label="Back" size="xl" @click="subMenuOpen = false" />
 			</div>
 		</Motionable>
 	</div>

@@ -1,22 +1,23 @@
 <template>
-    <v-container 
-        fluid  
-        v-if="page?.image"
-        style="padding:0px !important;margin:0px !important;">
-
-        <NuxtImg
-            style="width:100%; padding:0px !important;margin:0px !important;"
-            provider="directus"
-            fit='cover'
-            :src="page?.image"
-        />
+    <BlockContainer :full-width="true">
+        <template  
+            v-if="page?.image"
+            style="padding:0px !important;margin:0px !important;">
+        
+            <NuxtImg
+                style="width:100%; padding:0px !important;margin:0px !important;"
+                provider="directus"
+                fit='cover'
+                :src="page?.image"
+            />
+        </template>
         <!-- <v-parallax
             style="padding:0px !important;margin:0px !important;"
             :src="page?.hero_image"
         >
         </v-parallax> -->
         
-    </v-container>
+    </BlockContainer>
     
 </template>
 <script lang='ts' setup>
