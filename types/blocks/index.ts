@@ -1,3 +1,4 @@
+export type * from './block-banner-group';
 export type * from './block-column';
 export type * from './block-cta';
 export type * from './block-event-carousel';

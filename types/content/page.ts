@@ -2,6 +2,7 @@ import type { SEO } from '../meta';
 import type { User } from '../system';
 import type { Post } from '../content';
 import type {
+	BlockBannerGroup,
 	BlockColumn,
 	BlockCta,
 	BlockEventCarousel,
@@ -44,6 +45,7 @@ export interface PageBlock {
 	item?:
 		| (
 				| string
+				| BlockBannerGroup
 				| BlockColumn
 				| BlockCta
 				| BlockEventCarousel

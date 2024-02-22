@@ -11,10 +11,13 @@ export interface Theme {
 		code: string;
 		signature: string;
 	};
+	colors: {
+		darkBlue: string;
+	}
 }
 
 export const theme = {
-	primary: 'violet',
+	primary: 'blue',
 	gray: 'slate',
 	borderRadius: 'lg',
 	googleFonts: {
@@ -27,6 +30,24 @@ export const theme = {
 		code: 'Lato',
 		signature: 'Nothing You Could Do',
 	},
+	colors: {
+		darkBlue: '#003954',
+		blue: {
+			light: '#70CBFF',
+			DEFAULT: '#005b90',
+			dark: '#003452',
+		},
+		lightBlue: {
+			light: '#70adcc',
+			DEFAULT: '#70adcc',
+			dark: '#70adcc',
+		},
+		gray: {
+			light: '#5F5F5F',
+			DEFAULT: '#5F5F5F',
+			dark: '#5F5F5F',
+		  },
+	  },
 } as Theme;
 
 export const borderRadiusMap = {

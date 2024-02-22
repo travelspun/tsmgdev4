@@ -1,3 +1,4 @@
+import type { BlockBannerGroup } from './block-banner-group';
 import type { BlockColumn } from './block-column';
 import type { BlockCta } from './block-cta';
 import type { BlockEventCarousel } from './block-event-carousel';
@@ -23,6 +24,7 @@ import type { BlockVideo } from './block-video';
 import type { BlockDivider } from './block-divider';
 
 export type BlockType =
+	| 'block_banner_group'
 	| 'block_columns'
 	| 'block_cta'
 	| 'block_event_carousel'
@@ -48,6 +50,7 @@ export type BlockType =
 	| 'block_divider';
 
 export type Block =
+	| BlockBannerGroup
 	| BlockColumn
 	| BlockCta
 	| BlockEventCarousel

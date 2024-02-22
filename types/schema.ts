@@ -1,4 +1,5 @@
 import type {
+	BlockBannerGroup,
 	BlockColumn,
 	BlockCta,
 	BlockEventCarousel,
@@ -101,6 +102,7 @@ export interface Schema {
 	pages_blog: PagesBlog;
 
 	// Blocks
+	block_banner_group: BlockBannerGroup[];
 	block_columns: BlockColumn[];
 	block_cta: BlockCta[];
 	block_event_carousel: BlockEventCarousel[];

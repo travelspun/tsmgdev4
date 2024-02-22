@@ -101,7 +101,7 @@ useServerSeoMeta({
 </script>
 <template>
 	<BlockContainer>
-		<div class="flex flex-col col-span-full"  align="center">
+		<!-- <div class="flex flex-col col-span-full"  align="center">
 			<TypographyTitle v-if="page?.title"   align="center">
 				<div class='text-h4 font-weight-bold'>{{ page?.title }}</div>
 			</TypographyTitle>
@@ -133,24 +133,27 @@ useServerSeoMeta({
 					<v-spacer></v-spacer>
 					<nuxt-link :to="`/posts/${post.slug}`" class='primary'><span class='text-primary font-weight-bold'>{{post.title}}</span></nuxt-link><br>
 					<span class='primary'>{{post.date}}</span>
-					<!-- <v-btn size="small" color="surface-variant" variant="text" icon="mdi-heart"></v-btn>
-
-					<v-btn size="small" color="surface-variant" variant="text" icon="mdi-bookmark"></v-btn>
-
-					<v-btn size="small" color="surface-variant" variant="text" icon="mdi-share-variant"></v-btn> -->
 					</v-card-text>
 				</v-card>
 				</v-col>
 			</v-row>
-		</v-container>
+		</v-container> -->
 <!-- 		
 		<BlogGrid /> -->
 		<!-- <header class="pb-6 border-b border-gray-300 dark:border-gray-700">
 			<TypographyTitle>{{ page?.title }}</TypographyTitle>
 			<TypographyHeadline :content="page?.headline" />
+		</header> -->
+		<header class="pb-6 mt-5">
+			<div class="flex flex-col col-span-full"  align="center">
+				<TypographyTitle v-if="page?.title"   align="center">
+					<div class='text-h4 font-weight-bold'>{{ page?.title }}</div>
+				</TypographyTitle>
+				<TypographyProse v-if="page?.headline" :content="page?.headline" :alignment="center" />
+			</div>
 		</header>
 		<section class="relative w-full py-12 space-y-12">
-			<div
+			<!-- <div
 				class="relative grid w-full gap-12 pb-12 border-b-2 border-gray-300 md:grid-cols-2 lg:grid-cols-4 dark:border-gray-700"
 			>
 				<div>
@@ -163,9 +166,8 @@ useServerSeoMeta({
 					<TypographyTitle>Featured Article</TypographyTitle>
 					<PostCard :post="page?.featured_post" direction="horizontal" />
 				</div>
-			</div>
+			</div> -->
 			<div class="space-y-4">
-				<TypographyTitle>Latest & Greatest</TypographyTitle>
 				<div class="relative grid gap-8 md:gap-12 md:grid-cols-3 lg:grid-cols-6">
 					<PostCard
 						v-for="(post, postIdx) in posts"
@@ -179,6 +181,6 @@ useServerSeoMeta({
 					/>
 				</div>
 			</div>
-		</section> -->
+		</section>
 	</BlockContainer>
 </template>

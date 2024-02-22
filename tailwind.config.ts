@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 import tailwindcssForms from '@tailwindcss/forms';
 import defaultTheme from 'tailwindcss/defaultTheme';
+const colors = require('tailwindcss/colors')
 
 export default {
 	darkMode: 'class',
