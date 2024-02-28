@@ -14,6 +14,7 @@ const emit = defineEmits(['close']);
 	<div v-if="item.children.length > 0">
 		<button class="flex items-center rounded-md" @click="subMenuOpen = !subMenuOpen">
 			<span class="text-2xl mr-2 font-medium dark:text-white font-display">
+				<!-- <NuxtLink  :href="getNavItemUrl(item)" class="flex items-center rounded-md dark:text-white">{{ item.title }}</NuxtLink> -->
 				{{ item.title }}
 			</span>
 			<Icon v-if="item.children.length > 0" name="heroicons:plus" class="w-6 h-6 text-primary" />

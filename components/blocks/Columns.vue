@@ -1,10 +1,21 @@
 <script setup lang="ts">
-import type { BlocksImageCarousel } from '#build/components';
-import type { BlockButtonGroup, BlockColumn, BlockColumnRow } from '~/types';
+	import type { BlocksImageCarousel } from '#build/components';
+	import type { BlockButtonGroup, BlockColumn, BlockColumnRow } from '~/types';
 
-defineProps<{
-	data: BlockColumn;
-}>();
+	const { xs, xl, lg, md, sm } = useDisplay()
+	import { useDisplay } from 'vuetify'
+	const dispOrderClass = ref('')
+
+	watch(xs, (val) => {
+		dispOrderClass.value = !val ? 'order-md-first !important' : '';
+	},{immediate:true});
+	watch(sm, (val) => {
+		dispOrderClass.value = !val ? 'order-md-first !important' : '';
+	},{immediate:true});
+
+	defineProps<{
+		data: BlockColumn;
+	}>();
 </script>
 
 <template>
@@ -23,12 +34,13 @@ defineProps<{
 				class="relative grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-10"
 			>
 				<template v-if="row?.type === 'event'">
-					<div class="my-auto text-align-center" align="center">
+					<div class="my-auto text-align-center"
+						 align="center">
 						<BlocksEventColumnText :event="row?.event"></BlocksEventColumnText>
 					</div>
 				</template>
 				<template v-else>
-					<div class="mx-10 my-auto text-align-center" align="center">
+					<div class="mx-10 my-auto text-align-center"  align="center">
 						<TypographyTitle v-if="row?.title" class="text-align-center" >
 							<span class='text-h5 text-primary font-weight-bold'>{{ row?.title }}</span>
 						</TypographyTitle>

@@ -53,7 +53,7 @@
 		<div v-if="testimonials.length > 0">
 			
 			<Carousel 
-				:items-to-show='2'
+				:items-to-show='itemsToShow'
 				:breakpoints="breakpoints" 
 				:wrap-around="true" 
 				:autoplay='3000'
