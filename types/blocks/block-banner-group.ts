@@ -1,4 +1,4 @@
-import type { BlockBannerAd } from './block-banner-ad';
+import type { File } from '../content';
 
 export interface BlockBannerGroup {
 	id: string;
@@ -6,3 +6,5 @@ export interface BlockBannerGroup {
 	banners: (string | BlockBannerAd)[] | null;
 	alignment: 'left' | 'center' | null;
 }
+
+
