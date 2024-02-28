@@ -1,0 +1,26 @@
+# syntax = docker/dockerfile:1
+
+ARG NODE_VERSION=18.14.2
+
+FROM node:${NODE_VERSION} as base
+
+ARG PORT=4000
+
+ENV NODE_ENV=development
+
+WORKDIR /src
+
+RUN npm install -g pnpm
+
+# Build
+FROM base as build
+
+COPY --link package.json pnpm-lock.yaml .
+RUN pnpm install
+
+# Run
+FROM base
+
+COPY --from=build /src/node_modules /src/node_modules
+
+CMD [ "pnpm", "run", "dev" ]
