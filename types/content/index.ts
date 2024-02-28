@@ -8,3 +8,5 @@ export type * from './feature';
 export type * from './counter';
 export type * from './eventshow';
 export type * from './slide';
+export type * from './service-center-item';
+export type * from './event-info';

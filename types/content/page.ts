@@ -6,6 +6,7 @@ import type {
 	BlockColumn,
 	BlockCta,
 	BlockEventCarousel,
+	BlockEventInfo,
 	BlockFaq,
 	BlockForm,
 	BlockFeature,
@@ -16,6 +17,7 @@ import type {
 	BlockPageAnchor,
 	BlockQuote,
 	BlockRichtext,
+	BlockServiceCenter,
 	BlockSlideshow,
 	BlockStatisticsCounter,
 	BlockStep,
@@ -49,6 +51,7 @@ export interface PageBlock {
 				| BlockColumn
 				| BlockCta
 				| BlockEventCarousel
+				| BlockEventInfo
 				| BlockFaq
 				| BlockFeature
 				| BlockForm
@@ -59,6 +62,7 @@ export interface PageBlock {
 				| BlockPageAnchor
 				| BlockQuote
 				| BlockRichtext
+				| BlockServiceCenter
 				| BlockSlideshow
 				| BlockStatisticsCounter
 				| BlockStep

@@ -2,6 +2,7 @@ import type { BlockBannerGroup } from './block-banner-group';
 import type { BlockColumn } from './block-column';
 import type { BlockCta } from './block-cta';
 import type { BlockEventCarousel } from './block-event-carousel';
+import type { BlockEventInfo } from './block-event-info';
 import type { BlockFaq } from './block-faq';
 import type { BlockFeature } from './block-feature';
 import type { BlockForm } from './block-form';
@@ -15,6 +16,7 @@ import type { BlockLogocloud } from './block-logocloud';
 import type { BlockPageAnchor } from './block-page-anchor';
 import type { BlockQuote } from './block-quote';
 import type { BlockRichtext } from './block-richtext';
+import type { BlockServiceCenter } from './block-service-center';
 import type { BlockSlideshow } from './block-slideshow';
 import type { BlockStatisticsCounter } from './block-statistics-counter';
 import type { BlockStep } from './block-steps';
@@ -28,6 +30,7 @@ export type BlockType =
 	| 'block_columns'
 	| 'block_cta'
 	| 'block_event_carousel'
+	| 'block_event_info'
 	| 'block_faqs'
 	| 'block_feature'
 	| 'block_form'
@@ -41,6 +44,7 @@ export type BlockType =
 	| 'block_page_anchor'
 	| 'block_quote'
 	| 'block_richtext'
+	| 'block_service_center'
 	| 'block_slideshow'
 	| 'block_statistics_counter'
 	| 'block_steps'
@@ -53,6 +57,7 @@ export type Block =
 	| BlockBannerGroup
 	| BlockColumn
 	| BlockCta
+	| BlockEventInfo
 	| BlockEventCarousel
 	| BlockFaq
 	| BlockForm
@@ -67,6 +72,7 @@ export type Block =
 	| BlockPageAnchor
 	| BlockQuote
 	| BlockRichtext
+	| BlockServiceCenter
 	| BlockSlideshow
 	| BlockStatisticsCounter
 	| BlockStep

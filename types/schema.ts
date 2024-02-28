@@ -3,6 +3,7 @@ import type {
 	BlockColumn,
 	BlockCta,
 	BlockEventCarousel,
+	BlockEventInfo,
 	BlockFaq,
 	BlockFeature,
 	BlockForm,
@@ -16,6 +17,7 @@ import type {
 	BlockPageAnchor,
 	BlockQuote,
 	BlockRichtext,
+	BlockServiceCenter,
 	BlockSlideshow,
 	BlockStatisticsCounter,
 	BlockStep,
@@ -36,6 +38,7 @@ import type {
 } from './meta';
 import type { Page, PageBlock, Counter, 
 	Category, 
+	EventInfo,
 	EventShow, 
 	Feature, 
 	Form, 
@@ -44,7 +47,8 @@ import type { Page, PageBlock, Counter,
 	Testimonial, 
 	PagesProjects, 
 	PagesBlog,
-	Slide 
+	Slide,
+	ServiceCenterItem,
 } from './content';
 import type { Inbox, HelpArticle, HelpCollection, HelpFeedback } from './help';
 import type { File, User } from './system';
@@ -97,15 +101,18 @@ export interface Schema {
 	posts: Post[];
 	slides: Slide[];
 	team: Team[];
+	service_center_item: ServiceCenterItem[]
 	testimonials: Testimonial[];
 	pages_projects: PagesProjects;
 	pages_blog: PagesBlog;
+	event_info: EventInfo
 
 	// Blocks
 	block_banner_group: BlockBannerGroup[];
 	block_columns: BlockColumn[];
 	block_cta: BlockCta[];
 	block_event_carousel: BlockEventCarousel[];
+	block_event_info: BlockEventInfo[];
 	block_faq: BlockFaq[];
 	block_feature: BlockFeature[];
 	block_form: BlockForm[];
@@ -119,6 +126,7 @@ export interface Schema {
 	block_page_anchor: BlockPageAnchor[];
 	block_quote: BlockQuote[];
 	block_richtext: BlockRichtext[];
+	block_service_center: BlockServiceCenter[];
 	block_slideshow: BlockSlideshow[];
 	block_stat_counter: BlockStatisticsCounter[];
 	block_steps: BlockStep[];
